@@ -1,0 +1,57 @@
+.match-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #0b0e12;
+  cursor: pointer;
+}
+
+.match-card {
+  padding: 16px 36px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b0e12;
+  border-radius: 4px;
+}
+
+.command-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.command-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.score {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.match-status {
+  display: flex;
+  justify-content: center;
+  padding: 6px 34px;
+  border-radius: 4px;
+  width: 50px;
+}
+
+.command-statistic {
+  display: flex;
+  justify-content: space-between;
+}

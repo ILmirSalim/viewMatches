@@ -1,0 +1,51 @@
+.users-block {
+  flex-direction: column;
+  gap: 8px;
+  padding: 28px;
+}
+
+.users-container {
+  display: flex;
+  gap: 8px;
+}
+
+.user-container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.count-block {
+  color: white;
+  display: flex;
+  gap: 4px;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: #101318;
+  padding: 10px 20px;
+}
+
+.user-statistics-block {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+  color: white;
+  background: #101318;
+  margin-top: 8px;
+}
+
+.text {
+  color: #fafafa66;
+}
+
+.text-block {
+  display: flex;
+  gap: 8px;
+}
