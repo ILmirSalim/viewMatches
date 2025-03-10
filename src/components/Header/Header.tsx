@@ -4,13 +4,13 @@ import logo from '../../assets/Match Tracker.svg'
 import loader from '../../assets/Refresh.svg'
 import { fetchMatches, setStatusFilter } from '../../store/matches';
 import { useAppDispatch, useAppSelector } from '../../store/root';
-import error_icon from '../../assets/alert-triangle.svg'
 import { StatusFilter } from '../../store/matches/types';
+import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 
-export const Header:React.FC = () => {
+export const Header: React.FC = () => {
     const dispatch = useAppDispatch()
     const statusFilter = useAppSelector((state) => state.matches.statusFilter)
-    
+
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
     const { loading, error } = useAppSelector(state => state.matches)
 
@@ -24,14 +24,10 @@ export const Header:React.FC = () => {
     }
 
     return (
-        <div className='header'>
+        <header className='header'>
             <img src={logo} alt="Match Tracker Logo" />
             <div className='header-buttons-container'>
-                {error && <div className='error-block'>
-                    <img src={error_icon} alt="" />
-                    <div>Ошибка: не удалось загрузить информацию</div>
-                </div>
-                }
+                {error && <ErrorMessage />}
                 <div className="dropdown-wrapper">
                     <button
                         className="dropdown-button"
@@ -55,7 +51,7 @@ export const Header:React.FC = () => {
                 </div>
                 <button className='header-button' onClick={handleRefresh}>Обновить <img className={`icon-loader ${loading ? 'spin' : ''}`} src={loader} /></button>
             </div>
-        </div>
+        </header>
     )
 }
 
